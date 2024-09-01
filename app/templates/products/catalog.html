@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %} Каталог товаров {% endblock %}
+{% load bootstrap_tags %}
+{% load static %}
+{% block content %}
+        <br>
+<br>
+<br>
+<br>
+<br>
+
+        <div class="container">
+
+          <center>
+            <h1 class="lead">Найдено товаров - {{ product | length }} </h1>
+          </center>
+        </div>
+          <div class="album py-5">
+            <div class="container">
+              <div class="row">
+                  {% for item in product %}
+                <div class="col-md-4">
+                  <div class="card mb-4 border shadow-lg">
+                    <img class="card-img-top" src="{{ item.image.url }}" alt="iphone" style="display: block;"  data-holder-rendered="true">
+                    <div class="card-body">
+                      <p class="card-text">{{ item.category }} {{ item.name }}</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="{% url 'product' item.category.slug item.slug %}" type="button" class="btn bg-black text-white">Подробнее</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  {% endfor %}
+
+
+{% endblock %}

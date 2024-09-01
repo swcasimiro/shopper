@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %} Каталог товаров {% endblock %}
+{% load bootstrap_tags %}
+{% load static %}
+{% block content %}
+
+
+<br>
+<br>
+<br>
+<div class="container marketing">
+    <br>
+<h1 class="display-4">Ваша корзина</h1>
+
+    <br>
+
+
+{% for item in cart %}
+{% with product=item.product %}
+  <div class="row border">
+        <div class="col-4">
+            <br>
+          <img src="{{ product.image.url }}" alt="iPhone 13" width="150px">
+            <br>
+            <br>
+        </div>
+
+        <div class="col-4">
+          <br>
+          <a class="lead text-black" href="{% url 'product' product.category.slug product.slug %}">{{ product.category }} {{ product.name }}</a>
+          <br>
+            <br>
+            <label><strong>Цена за штуку - {{ product.price|floatformat:0 }} ₽</strong></label>
+            <br>
+            <label><strong> Количество: {{ item.quantity }}</strong></label>
+            <br>
+            <label><strong> Общая цена за товар - {{ item.total_price|floatformat:0 }} ₽ </strong></label>
+
+        </div>
+
+        <div class="col-4">
+          <br>
+          <br>
+          <button class="btn bg-black text-white btn-lg">Оформить заказ</button>
+          <a href="{% url 'cart_remove' product.id%}" class="btn btn-danger btn-lg">Удалить с корзины</a>
+        </div>
+
+
+        </div>
+
+{% endwith %}
+{% endfor %}
+
+
+{% endblock %}
