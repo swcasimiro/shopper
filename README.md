@@ -64,3 +64,6 @@
 <li>http://localhost/admin/</li>
 <li><code>http://domain_name.ru/admin/</code></li>
 </ul>
+<br>
+<strong><p>Информация:</p></strong>
+<p><img src="https://cdn-icons-png.flaticon.com/512/25/25333.png" width="15px"> Так же стоит отметить, что вся активация <code>SECRET_KEY</code> и подключение DATABASE происходит через корень проекта, созданием файла <code>.env</code>. Сайт для генерации <a href="https://djecrety.ir/">SECRET_KEY</a> <img src="https://cdn-icons-png.flaticon.com/512/25/25333.png" width="15px"></p>
