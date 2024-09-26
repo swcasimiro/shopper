@@ -8,20 +8,20 @@
 <strong><p>Используемые технологии:</p></strong>
   <p>Все использованные инструменты, которые были задействованы в реализации данного проекта.</p>
 <div>
-<p><code>Языки программирования</code></p>
+<p><strong>Языки программирования</strong></p>
   <a>
     <img src="https://img.shields.io/badge/python-346c99?style=for-the-badge&logo=python&logoColor=fecd3a" alt="Python Badge"/>
   </a>
 <br>
 <br>  
-<p><code>Фреймворк</code></p>
+<p><strong>Фреймворк</strong></p>
 
 <a>
     <img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white" alt="Django Badge"/>
 </a>
 <br>
 <br>
-<p><code>База данных</code></p>
+<p><strong>База данных</strong></p>
 <a>
   <img src="https://img.shields.io/badge/postgresql-316093?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL Badge"/>
 </a>
